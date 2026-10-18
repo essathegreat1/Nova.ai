@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090b16">
+<title>NovaCreate AI Video</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="orb">✦</span><div><strong>NovaCreate</strong><small>AI VIDEO STUDIO</small></div></div>
+  <span class="pill">BETA · FREE UI</span>
+</header>
+<main>
+  <section class="hero">
+    <div class="eyebrow">YOUR IDEAS, IN MOTION</div>
+    <h1>Turn words into<br><span>something cinematic.</span></h1>
+    <p>Write a scene, choose a visual direction, and prepare your video prompt.</p>
+  </section>
+  <section class="panel">
+    <label for="prompt">Describe your video</label>
+    <textarea id="prompt" rows="5" maxlength="1200" placeholder="A tiny astronaut walks across a glowing alien garden at sunrise, cinematic camera movement..."></textarea>
+    <div class="meta"><span id="count">0 / 1200</span><button class="text-button" id="example">Try an example ↗</button></div>
+    <div class="controls">
+      <div><label for="style">Visual style</label><select id="style"><option>Cinematic</option><option>Anime</option><option>Realistic</option><option>3D animation</option><option>Fantasy</option><option>Documentary</option></select></div>
+      <div><label for="ratio">Aspect ratio</label><select id="ratio"><option value="16:9">Landscape · 16:9</option><option value="9:16">Portrait · 9:16</option><option value="1:1">Square · 1:1</option></select></div>
+      <div><label for="length">Duration target</label><select id="length"><option>4 seconds</option><option>6 seconds</option><option>8 seconds</option></select></div>
+    </div>
+    <button id="generate" class="primary">✦ Prepare my video prompt</button>
+    <p class="note">This free starter prepares a polished prompt. Actual AI video rendering needs a connected model or compute service.</p>
+  </section>
+  <section class="panel result" id="result" hidden>
+    <div class="result-head"><div><div class="eyebrow">READY FOR YOUR VIDEO MODEL</div><h2>Your prompt</h2></div><span class="status">Prepared</span></div>
+    <pre id="output"></pre>
+    <div class="actions"><button id="copy" class="primary">Copy prompt</button><button id="download" class="secondary">Download .txt</button></div>
+    <p id="feedback" class="note" aria-live="polite"></p>
+  </section>
+  <section class="disclaimer"><strong>What this starter can do:</strong> create, refine, copy, and download video prompts directly in your browser. It does not falsely claim to render an AI video; connect a real model to enable that feature.</section>
+</main>
+<footer>NovaCreate AI · Built for your next idea</footer>
+<script src="app.js"></script>
+</body>
+</html>
